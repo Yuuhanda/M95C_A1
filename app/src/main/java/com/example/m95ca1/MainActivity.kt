@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode==123) {
-            var bmp= data?.extras?get("data") as? Bitmap
+            var bmp= data?.extras?.get("data") as? Bitmap
             imageView.setImageBitmap(bmp)
         }
     }
