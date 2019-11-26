@@ -1,6 +1,6 @@
 package com.example.m95ca1
 
-import android.content.Context
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
@@ -15,11 +15,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       button_capture.setOnClickListener(
-            var i = Intent (MediaStore.ACTION_IMAGE_CAPTURE)
+       button_capture.setOnClickListener {
+           var i = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 
-        startActivityForResult(i,123)
-        )
+           startActivityForResult(i, 123)
+       }
+
 
     }
 
